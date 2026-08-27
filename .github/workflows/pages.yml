@@ -19,6 +19,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: npm }
+      - name: Validar variável obrigatória
+        shell: bash
+        run: |
+          if [ "$VITE_APP_TITLE" != "CI Repair Lab" ]; then
+            echo "::error file=.github/workflows/pages.yml::Required environment variable VITE_APP_TITLE is missing. Expected value: CI Repair Lab"
+            exit 1
+          fi
       - run: npm ci
       - run: npm run build
       - if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
