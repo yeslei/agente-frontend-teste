@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
+const syntaxFailure =
+
 const cases = [
   {id:'CODE_TEST',title:'Código & testes',desc:'Sintaxe, imports e comportamento inesperado.',log:"Failed to resolve import './PipelineCard'",agent:'CodeTestAgent',file:'src/App.tsx',color:'#c8ff67'},
   {id:'BUILD_DEPENDENCY',title:'Build & dependências',desc:'Pacotes ausentes, lockfiles e conflitos de versão.',log:'npm ERR! unable to resolve dependency tree',agent:'BuildDependencyAgent',file:'package.json',color:'#71d4ff'},
