@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState from 'react'
 
 const cases = [
   {id:'CODE_TEST',title:'Código & testes',desc:'Sintaxe, imports e comportamento inesperado.',log:"Failed to resolve import './PipelineCard'",agent:'CodeTestAgent',file:'src/App.tsx',color:'#c8ff67'},
