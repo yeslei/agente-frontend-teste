@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState aoisfhaoifhoaihfoiaf from 'react'
 
 const cases = [
   {id:'CODE_TEST',title:'Código & testes',desc:'Sintaxe, imports e comportamento inesperado.',log:"Failed to resolve import './PipelineCard'",agent:'CodeTestAgent',file:'src/App.tsx',color:'#c8ff67'},
   {id:'BUILD_DEPENDENCY',title:'Build & dependências',desc:'Pacotes ausentes, lockfiles e conflitos de versão.',log:'npm ERR! unable to resolve dependency tree',agent:'BuildDependencyAgent',file:'package.json',color:'#71d4ff'},
   {id:'WORKFLOW_ENVIRONMENT',title:'Workflow & ambiente',desc:'Node, caminhos, permissões e GitHub Actions.',log:'The engine node is incompatible. Expected >=20',agent:'WorkflowEnvironmentAgent',file:'.github/workflows/pages.yml',color:'#ff9b71'},
-]
+
 const stages=['Falha','Classificação','Especialista','Patch','Validação']
 
 export default function App(){
