@@ -19,7 +19,6 @@
     "@vitejs/plugin-react": "6.0.2",
     "typescript": "5.9.3",
     "vite": "8.0.13",
-    "@ci-repair-lab/missing-dependency": "1.0.0"
   },
   "type": "module"
 }
