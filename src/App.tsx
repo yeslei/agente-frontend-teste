@@ -1,12 +1,12 @@
-import { useEffect, useRef, useState } from 'react
+import { useEffect, useRef, useState } from 'react'
 
 const cases = [
   {id:'CODE_TES',title:'Código & testes',desc:'Sintaxe, imports e comportamento inesperado.',log:"Failed to resolve import './PipelineCard'",agent:'CodeTestAgent',file:'src/App.tsx',color:'#c8ff67'},
   {id:'BUILD_DEPENDENCY',title:'Build & dependências',desc:'Pacotes ausentes, lockfiles e conflitos de versão.',log:'npm ERR! unable to resolve dependency tree',agent:'BuildDependencyAgent',file:'package.json',color:'#71d4ff'},
   {id:'ORKFLOW_ENVIRONMENT',title:'Workflow & ambiente',desc:'Node, caminhos, permissões e GitHub Actions.',log:'The engine node is incompatible. Expected >=20',agent:'WorkflowEnvironmentAgent',file:'.github/workflows/pages.yml',color:'#ff9b71'},
+]
 
-
-const stages=['Falha','Classificação','Especialista','Patch','Validação'
+const stages=['Falha','Classificação','Especialista','Patch','Validação']
 
 export default function App(){
   const [choice,setChoice]=useState(0),[step,setStep]=useState(4),[running,setRunning]=useState(false)
@@ -21,4 +21,5 @@ export default function App(){
     <section className="cases" id="cases"><div className="sectionHead"><div><small>Cenários controlados</small><h2>Escolha uma falha.</h2></div><p>O modelo é o mesmo. O contexto, as ferramentas e o foco mudam conforme a categoria.</p></div><div className="grid">{cases.map((c,i)=><button className={`card ${i===choice?'selected':''}`} style={{'--accent':c.color} as React.CSSProperties} onClick={()=>{setChoice(i);setStep(4)}} key={c.id}><span>0{i+1}</span><i>{i===0?'</>':i===1?'□+':'⚙'}</i><small>{c.id}</small><h3>{c.title}</h3><p>{c.desc}</p><b>{c.agent} →</b></button>)}</div></section>
     <footer><span className="brand"><b>CI</b> REPAIR LAB</span><p>Falhou. Classificou. Reparou. Validou.</p><span>Python · LangGraph · Bedrock</span></footer>
   </main>
+}
 
