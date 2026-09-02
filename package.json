@@ -9,8 +9,8 @@
     "preview": "vite preview --config vite.pages.config.ts"
   },
   "dependencies": {
-    "react": "40.2.6",
-    "react-dom": "00000000000999999999"
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
   },
   "devDependencies": {
     "@types/node": "22.19.19",
